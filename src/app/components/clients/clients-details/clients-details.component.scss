@@ -1,0 +1,49 @@
+@import '../../../../scss/vars';
+
+.client-profile {
+    padding-top: 10px;
+}
+.client-detail__img {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+}
+
+.transaction-list {
+  padding-top: 5px;
+    
+  &__header-one {
+    justify-content: space-around;
+    align-items: center;
+    border-right-style: dashed;
+    border-right-color: rgb(136, 129, 127);
+    border-right-width: 1px;
+  }
+
+  &__header-two {
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  &__header-three {
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  &__header-four {
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  &:hover {
+    .transaction-list-pannel{
+      border-left-style: solid;
+      border-left-color: $red_color;
+      border-left-width: 5px;
+    }
+  }
+
+}

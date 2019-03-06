@@ -1,0 +1,48 @@
+@import '../../../../scss/vars';
+
+
+.cfg-details {
+  display : flex;
+  justify-content : center;
+  align-content : space-between;
+
+  &__head {
+    flex: 1 60%;
+  }
+
+  &__clients {
+    flex: 1 40%;
+  }
+
+}
+
+.client-list {
+  display: flex;
+  padding: 0px;
+  margin: 5px;
+  cursor: pointer;
+
+  &__id-sec--start{
+    justify-content: space-around;
+    align-items: center;
+    border-right-style: dashed;
+    border-right-color: rgb(136, 129, 127);
+    border-right-width: 1px;    
+  }  
+  
+  &__id-sec--center{
+    justify-content: start;
+    align-items: flex-end;
+    padding-left: 15px;
+  }
+
+  
+  &:hover{
+    .client-list__header {
+      border-left-style: solid;
+      border-left-color: $red_color;
+      border-left-width: 5px;   
+    }
+  }
+
+}

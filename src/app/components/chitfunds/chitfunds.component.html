@@ -1,0 +1,61 @@
+
+<section fxLayout>
+  <div fxFlex='60' style="margin-top : 15px; margin-right : 10px">
+      <mat-card >
+          <mat-card-header class="client-list-main">
+              <mat-card-title class="client-list-main__title">Groups</mat-card-title>
+              <button mat-icon-button class="client-list-main__icon">
+                <mat-icon >group_add</mat-icon>
+              </button>
+          </mat-card-header>
+          <mat-card-content>
+              <div *ngFor="let client of clients" class="client-list">
+                  <mat-card fxLayout='row' routerLink="/cfdetails" class="client-list__header" >
+                    <span fxFlex="20" class="client-list__id-sec--start">
+                        <span >Started</span>
+                        <i class="far fa-calendar-alt"></i>
+                        <br>
+                        <span [ngStyle]="{ color: 'blue'}">Jan 01, 19</span>
+                    </span>
+                    <span fxFlex="20" class="client-list__id-sec--center">
+                      {{ client.firstName }} 
+                    </span>
+                    <span fxFlex="20" class="client-list__id-sec--center">
+                      <!-- {{ client.id }} -->
+                    </span>
+                    <span fxFlex="20" class="client-list__id-sec--center">
+                      <span class="numberCircle">25</span>
+                    </span>
+                    <span fxFlex="20" class="client-list__id-sec--center">
+                        <span class="numberCircle">2/25</span>
+                    </span>                    
+                  </mat-card>
+                </div>
+            </mat-card-content>
+      </mat-card>
+  </div>
+
+  <div fxFlex='40' style="margin-top : 15px" >
+      <mat-card >
+          <mat-card-header class="client-list-main">
+              <mat-card-title class="client-list-main__title">Clients</mat-card-title>
+              <button mat-icon-button class="client-list-main__icon">
+                  <mat-icon >how_to_reg</mat-icon>
+                </button>
+          </mat-card-header>
+          <mat-card-content>
+              <div *ngFor="let client of clients" class="client-list">
+                  <mat-card fxLayout='row' routerLink="/client-details" class="client-list__header" >
+                    <span fxFlex="20" class="client-list__id-sec--start">
+                      LA
+                    </span>
+                    <span fxFlex="80" class="client-list__id-sec--center">
+                      {{ client.firstName }} {{ client.lastName }}
+                    </span>                    
+                  </mat-card>
+                </div>
+            </mat-card-content>
+      </mat-card>
+    </div>
+
+</section>

@@ -1,0 +1,77 @@
+@import '../../../scss/vars';
+
+.client-list-main{
+    display: flex;
+    flex-direction: row;
+    background-color: $red_color;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
+    &__title {
+        justify-content: center;
+        align-content: center;
+        color: $white_color;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        justify-content: flex-end;
+        align-content: center;
+        color: $white_color;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+}
+.client-list {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    margin: 2px;
+    cursor: pointer;
+    
+    &__header{
+        height: 60px;
+        width: 100%;
+    }
+    &__id-sec--start{
+      justify-content: space-around;
+      align-items: center;
+      font-weight: bold;
+      border-right-style: dashed;
+      border-right-color: rgb(136, 129, 127);
+      border-right-width: 1px;    
+    }  
+    
+    &__id-sec--center{
+      justify-content: start;
+      align-items: center;
+      padding-left: 15px;
+    }
+  
+    &__id-sec--end{
+      justify-content: start;
+      align-items: center;
+    }
+  
+    &:hover{
+      .client-list__header {
+        border-left-style: solid;
+        border-left-color: $red_color;
+        border-left-width: 5px;   
+      }
+    }  
+  }
+
+  .numberCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid $red_color;
+    background-color: $red_color;
+    color: $white_color;
+}

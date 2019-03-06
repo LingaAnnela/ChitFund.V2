@@ -1,0 +1,27 @@
+<section class="clients">
+
+  <button mat-raised-button color="warn" >Add Client </button>
+
+  <div *ngFor="let client of clients" class="client-list">
+    <mat-card fxLayout='row' routerLink="/client-details" class="client-list client-list__header" >
+      <span fxFlex="20" class="client-list client-list__id-sec--start">
+        LA
+      </span>
+      <span fxFlex="45" class="client-list client-list__id-sec--center">
+        {{ client.firstName }} {{ client.lastName }}
+      </span>
+      <div fxFlex="33" fxLayoutAlign="end" class="client-list__id-sec--end">
+        <p style="margin: 5px">
+          <button mat-stroked-button style="color: green" routerLink="edit-client/{{client.id}}">
+            Edit
+          </button>
+        </p>
+        <p style="margin: 5px">
+          <button mat-stroked-button color="warn" (click)="onDeleteClick(client.id);$event.preventDefault();$event.stopPropagation()">
+            Delete
+          </button>
+        </p>
+      </div>
+    </mat-card>
+  </div>
+</section>

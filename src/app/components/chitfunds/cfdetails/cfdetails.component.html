@@ -1,0 +1,89 @@
+<section class="cfg-details">
+  <div class="cfg-details__head">
+    <div class="cfg-details__head__group">
+      <mat-card>
+        <span>
+          <!-- <img src="../../../../assets/dp.jpg" alt="LA" class="client-detail__img"> -->
+        </span>
+        <mat-tab-group>
+          <mat-tab label="Profile">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>{{ client.firstName }}</mat-card-title>
+                <mat-card-subtitle>{{ client.lastName }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-actions>
+                <button mat-button>Contact</button>
+                <button mat-button>Email</button>
+              </mat-card-actions>
+            </mat-card>
+          </mat-tab>
+          <mat-tab label="Details">
+            <p style="padding-top: 15px">
+              <b>Principal : </b> {{ 100000 | currency:"INR" }}
+            </p>
+            <p>
+              <b>Interest : </b> {{ 24000 | currency:"INR" }}
+            </p>
+            <p>
+              <b>Total : </b> {{ 124000 | currency:"INR"}}
+            </p>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+
+    </div>
+    <div class="cfg-details__head__details">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header style="padding-top: 10px">
+            <mat-panel-title>
+              <div>
+                <span>Last Updated</span>
+                <br>
+                <span [ngStyle]="{ color: 'blue'}"> Feb 20, 2019 </span>
+              </div>
+              <span>
+                Details
+              </span>
+              <span>
+                {{ 100000 | currency:"INR" }}
+              </span>
+              <span>
+                {{ 24000 | currency:"INR"}}
+              </span>
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+
+  <div class="cfg-details__clients">
+          <mat-card >
+              <mat-card-header class="client-list-main">
+                  <mat-card-title class="client-list-main__title">Participants</mat-card-title>
+                  <button mat-icon-button class="client-list-main__icon">
+                      <mat-icon >how_to_reg</mat-icon>
+                    </button>
+              </mat-card-header>
+              <mat-card-content>
+                  <div *ngFor="let client of clients" class="client-list">
+                      <mat-card routerLink="/client-details" class="client-list__header" >
+                        <span class="client-list__id-sec--start">
+                          {{ client.id }}
+                        </span>
+                        <span class="client-list__id-sec--center">
+                          {{ client.firstName }} {{ client.lastName }}
+                        </span>  
+                        <span >
+                            abcdfvsfdsfd
+                          </span>                     
+                      </mat-card>
+                    </div>
+                </mat-card-content>
+          </mat-card>
+  </div>
+</section>
